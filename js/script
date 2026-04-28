@@ -1,0 +1,22 @@
+// File: script.js
+// Description: Handles login logic, navigation between screens, and user interactions.
+
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user === "" || pass === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    document.getElementById("userText").innerText = "Hello " + user;
+
+    document.getElementById("login").style.display = "none";
+    document.getElementById("welcome").style.display = "block";
+}
+
+function logout() {
+    document.getElementById("login").style.display = "block";
+    document.getElementById("welcome").style.display = "none";
+}
